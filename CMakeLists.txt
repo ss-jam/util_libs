@@ -4,7 +4,13 @@
 # SPDX-License-Identifier: BSD-2-Clause
 #
 
-cmake_minimum_required(VERSION 3.7.2)
+cmake_minimum_required(VERSION 3.8.2)
+
+project(uspace_util_libs)
+
+if(NOT config_string)
+    include(../../kernel/tools/helpers.cmake)
+endif()
 
 add_subdirectory(libutils)
 add_subdirectory(libplatsupport)
